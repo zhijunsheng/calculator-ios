@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var displayBoardLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -17,6 +20,8 @@ class ViewController: UIViewController {
 
     @IBAction func touchButtonOne(_ sender: UIButton) {
         print(1)
+        let operantOne: Int = 1
+        displayBoardLabel.text = "\(operantOne)"
     }
     
 }
