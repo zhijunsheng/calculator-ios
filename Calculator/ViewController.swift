@@ -19,10 +19,48 @@ class ViewController: UIViewController {
     }
 
     @IBAction func touchButtonOne(_ sender: UIButton) {
-        print(1)
-        let operantOne: Int = 1
-        displayBoardLabel.text = "\(operantOne)"
+//        displayBoardLabel.text = displayBoardLabel.text! + "1"
+        displayBoardLabel.text!.append("1")
+//        displayBoardLabel.text! += "1"
     }
+    
+    @IBAction func touchButtonTwo(_ sender: UIButton) {
+
+        displayBoardLabel.text!.append("2")
+    }
+    
+    @IBAction func touchButtonThree(_ sender: UIButton) {
+        displayBoardLabel.text!.append("3")
+    }
+    
+    @IBAction func touchButtonFour(_ sender: UIButton) {
+        displayBoardLabel.text!.append("4")
+    }
+    
+    @IBAction func touchButtonFive(_ sender: UIButton) {
+        displayBoardLabel.text!.append("5")
+    }
+    
+    @IBAction func touchButtonSix(_ sender: UIButton) {
+        displayBoardLabel.text!.append("6")
+    }
+    
+    @IBAction func touchButtonSeven(_ sender: UIButton) {
+        displayBoardLabel.text!.append("7")
+    }
+    
+    @IBAction func touchButtonEight(_ sender: UIButton) {
+        displayBoardLabel.text!.append("8")
+    }
+    
+    @IBAction func touchButtonNine(_ sender: UIButton) {
+        displayBoardLabel.text!.append("9")
+    }
+    
+    @IBAction func touchButtonZero(_ sender: UIButton) {
+        displayBoardLabel.text!.append("0")
+    }
+    
     
 }
 
