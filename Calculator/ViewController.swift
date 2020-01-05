@@ -12,11 +12,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var number1Label: UILabel!
     @IBOutlet weak var number2Label: UILabel!
-    
-    
     @IBOutlet weak var checkmark: UILabel!
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        startRandom()
+    }
+
     @IBAction func check(_ sender: Any) {
         if answerTextField.text == "" {
             return
@@ -25,30 +28,22 @@ class ViewController: UIViewController {
         let num1 = Int(number1Label.text!)!
         let num2 = Int(number2Label.text!)!
         let sum = num1 + num2
-        print("\(sum)")
         
         if x == sum {
             checkmark.text = "Correct!"
         } else {
             checkmark.text = "Incorrect!"
-            
         }
-        
     }
     
     @IBAction func generate(_ sender: Any) {
-        number1Label.text = "\(arc4random() % 100 + 1)"
-        number2Label.text = "\(arc4random() % 100 + 1)"
+        checkmark.text = "?"
+        answerTextField.text = ""
+        startRandom()
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
+    func startRandom() {
+        number1Label.text = "\(arc4random() % 100)"
+        number2Label.text = "\(arc4random() % 100)"
     }
-    
-   
-    
-    
 }
-
