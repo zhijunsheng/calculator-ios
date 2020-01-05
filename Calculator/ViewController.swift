@@ -13,21 +13,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var correctLabel: UILabel!
     @IBOutlet weak var wrongLabel: UILabel!
+    @IBOutlet weak var number1Label: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let a = Int(arc4random())
+        let smallerA = a % 99 + 1
+        number1Label.text = "\(smallerA)"
+        
+        
     }
     
     @IBAction func check(_ sender: UIButton) {
         let answer = Int(answerTextField.text!)!
-        
-        if answer == 33 {
+        if answer == Int(number1Label.text!)! + 10 {
             wrongLabel.isHidden = true
             correctLabel.isHidden = false
         } else {
             correctLabel.isHidden = true
             wrongLabel.isHidden = false
         }
+        
+        
     }
+    
 }
