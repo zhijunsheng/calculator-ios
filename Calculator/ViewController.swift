@@ -16,8 +16,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var checkmark: UILabel!
     
-   
+    
     @IBAction func check(_ sender: Any) {
+        if answerTextField.text == "" {
+            return
+        }
         let x = Int(answerTextField.text!)!
         let num1 = Int(number1Label.text!)!
         let num2 = Int(number2Label.text!)!
@@ -30,11 +33,12 @@ class ViewController: UIViewController {
             checkmark.text = "Incorrect!"
             
         }
+        
     }
     
     @IBAction func generate(_ sender: Any) {
-        number1Label.text = "\(arc4random() % 10 + 1)"
-        number2Label.text = "\(arc4random() % 10 + 1)"
+        number1Label.text = "\(arc4random() % 100 + 1)"
+        number2Label.text = "\(arc4random() % 100 + 1)"
     }
     
     
