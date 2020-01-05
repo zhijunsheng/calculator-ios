@@ -36,6 +36,12 @@ class ViewController: UIViewController {
             wrongLabel.isHidden = false
         }
         
+    }
+    @IBAction func next(_ sender: UIButton) {
+        let a = Int(arc4random())
+        let smallerA = a % 100
+        number1Label.text = "\(smallerA)"
+        
         
     }
     
