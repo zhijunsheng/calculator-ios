@@ -37,6 +37,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func generate(_ sender: Any) {
+        if answerTextField.text == "" || checkmark.text == "Incorrect!" {
+            return
+        }
+      
         checkmark.text = "?"
         answerTextField.text = ""
         startRandom()
