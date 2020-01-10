@@ -22,15 +22,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func check(_ sender: UIButton) {
-        if answerTextField.text == ("") {
+        guard let rawText = answerTextField.text, let answer = Int(rawText) else {
             return
-        }
+        }        
         
-        // xxx == nil, xxx != nil
-        if Int(answerTextField.text!) == nil {
-            return
-        }
-        let answer = Int(answerTextField.text!)!
         if answer == Int(number1Label.text!)! + Int(number2Label.text!)! {
             wrongLabel.isHidden = true
             correctLabel.isHidden = false
