@@ -25,6 +25,11 @@ class ViewController: UIViewController {
         if answerTextField.text == ("") {
             return
         }
+        
+        // xxx == nil, xxx != nil
+        if Int(answerTextField.text!) == nil {
+            return
+        }
         let answer = Int(answerTextField.text!)!
         if answer == Int(number1Label.text!)! + Int(number2Label.text!)! {
             wrongLabel.isHidden = true
