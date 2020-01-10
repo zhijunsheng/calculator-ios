@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbh-Sz-C5e">
-                                <rect key="frame" x="315" y="219" width="79" height="90"/>
+                                <rect key="frame" x="291" y="219" width="103" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="75"/>
                                 <nil key="textColor"/>
@@ -95,6 +95,7 @@
                         <outlet property="answerTextField" destination="3du-Jp-QVV" id="fWP-5D-e0F"/>
                         <outlet property="correctLabel" destination="kBY-NC-3gT" id="W4O-DE-bH1"/>
                         <outlet property="number1Label" destination="igF-eW-8oe" id="fHt-A2-8aR"/>
+                        <outlet property="number2Label" destination="bbh-Sz-C5e" id="ePa-Mj-XCP"/>
                         <outlet property="wrongLabel" destination="3id-mH-Sxy" id="sxi-Sy-31Q"/>
                     </connections>
                 </viewController>
