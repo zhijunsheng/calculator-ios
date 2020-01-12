@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var answerTextField2: UITextField!
+    @IBOutlet weak var remainderTextField: UITextField!
     @IBOutlet weak var correctLabel: UILabel!
     @IBOutlet weak var correctLabel2: UILabel!
     @IBOutlet weak var wrongLabel: UILabel!
@@ -25,6 +26,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         nextQuestion()
     }
+    
+    
+    
     
     @IBAction func check(_ sender: UIButton) {
         guard let rawText = answerTextField.text, let answer = Int(rawText) else {
@@ -75,11 +79,11 @@ class ViewController: UIViewController {
     func nextQuestion2() {
         let a = Int(arc4random())
         let smallerA = a % 100
-        number1Label.text = "\(smallerA)"
+        secondNumber1Label.text = "\(smallerA)"
         
         let b = Int(arc4random())
         let smallerB = b % 100
-        number2Label.text = "\(smallerB)"
+        secondNumber2Label.text = "\(smallerB)"
     }
     
 }
