@@ -63,7 +63,18 @@ class ViewController: UIViewController {
             return
         }
         
+        guard let rawText2 = remainderTextField.text, let answer2 = Int(rawText2) else {
+            return
+        }
+        
         if answer == Int(secondNumber1Label.text!)! / Int(secondNumber2Label.text!)! {
+            wrongLabel2.isHidden = true
+            correctLabel2.isHidden = false
+        } else {
+            correctLabel2.isHidden = true
+            wrongLabel2.isHidden = false
+        }
+        if answer2 == Int(secondNumber1Label.text!)! % Int(secondNumber2Label.text!)! {
             wrongLabel2.isHidden = true
             correctLabel2.isHidden = false
         } else {
